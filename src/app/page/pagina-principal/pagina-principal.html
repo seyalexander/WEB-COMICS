@@ -5,83 +5,149 @@
     <img src="https://i.pinimg.com/736x/a9/a3/66/a9a3667ab3e5b60f00377c035f629eb0.jpg"
       class="w-full h-full object-cover">
 
-    <div class="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent"></div>
+    <!-- DEGRADADO -->
+    <div class="absolute inset-0 bg-linear-to-t from-black via-black/70 to-transparent"></div>
 
+    <!-- NAV -->
     <app-nav-components class="absolute top-0 w-full z-50"></app-nav-components>
 
+    <!-- CONTENIDO HERO -->
     <div class="absolute bottom-20 left-10 z-10 max-w-2xl">
-      <h1 class="text-6xl md:text-7xl font-extrabold mb-4">Anime World</h1>
+
+      <span class="bg-orange-500 text-xs px-3 py-1 rounded-full font-semibold flex items-center gap-2 w-30">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-bell-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 17h-6a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6a2 2 0 1 1 4 0a7 7 0 0 1 4 6" /><path d="M9 17v1c0 1.408 .97 2.59 2.28 2.913" /><path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296" /></svg> Tendencias
+      </span>
+
+      <h1 class="text-6xl md:text-7xl font-extrabold mt-4 mb-4 leading-tight">
+        Anime World
+      </h1>
+
       <p class="text-lg text-gray-300 mb-6">
-        Explora los mejores animes y descubre nuevas historias.
+        Explora los mejores animes y descubre nuevas historias increíbles.
       </p>
+
+      <div class="flex gap-4">
+        <button class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-xl font-semibold transition flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 4v16l13 -8l-13 -8" /></svg>
+          Ver ahora
+        </button>
+
+        <button class="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-xl font-semibold transition">
+          Explorar
+        </button>
+      </div>
+
     </div>
   </section>
 
   <!-- INFO -->
-  <section class="max-w-6xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-10 items-center">
-    <img src="https://i.pinimg.com/1200x/a0/23/46/a02346a138bde4c5258976bd575f7358.jpg" class="rounded-2xl shadow-xl">
+  <section class="max-w-6xl mx-auto py-20 px-6 grid md:grid-cols-2 gap-12 items-center">
+
+    <div class="relative">
+      <img src="https://i.pinimg.com/1200x/a0/23/46/a02346a138bde4c5258976bd575f7358.jpg"
+        class="rounded-2xl shadow-2xl">
+
+      <!-- EFECTO GLOW -->
+      <div class="absolute -inset-2 bg-orange-500/20 blur-2xl -z-10"></div>
+    </div>
 
     <div>
-      <h2 class="text-4xl font-bold text-orange-500 mb-4">¿Qué es el anime?</h2>
-      <p class="text-gray-300">
+      <h2 class="text-4xl font-bold text-orange-400 mb-4">
+        ¿Qué es el anime?
+      </h2>
+
+      <p class="text-gray-300 leading-relaxed text-lg">
         El <strong>anime</strong> es un término con elq ue se identifica en general a la animación de preocedencia
         japonesa. Hablamos de una industria muy potente, <strong>que</strong> fusiona el entretenimiento con la herencia
         cultural del país. Una de sus grandes cirtudes es haver sabido seducir a públicos de cualquier gusto y edad.
       </p>
     </div>
+
   </section>
 
+  <!-- SEPARADOR -->
+  <div class="border-t border-white/10"></div>
+
   <!-- CARDS -->
-  <section class="max-w-7xl mx-auto px-6 pb-20">
-    <h2 class="text-3xl font-bold mb-10 text-center">Animes populares</h2>
+  <section class="max-w-7xl mx-auto px-6 py-20">
+
+    <h2 class="text-3xl font-bold mb-10 text-center">
+      Animes populares
+    </h2>
 
     <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
-      <div class="group relative overflow-hidden rounded-2xl">
+      <!-- CARD -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg">
         <img src="https://i.pinimg.com/736x/57/30/2c/57302c0749f86843295d8c1d5759a814.jpg"
-          class="w-full h-80 object-cover group-hover:scale-110 transition">
+          class="w-full h-80 object-cover transition duration-500 group-hover:scale-110 group-hover:blur-[1px]">
 
-        <div class="absolute inset-0 bg-linear-to-t from-black to-transparent"></div>
-        <h3 class="absolute bottom-4 left-4 text-xl font-bold">One Piece</h3>
+        <div class="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent"></div>
+
+        <div class="absolute bottom-4 left-4 right-4">
+          <h3 class="text-xl font-bold">One Piece</h3>
+          <p class="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition">
+            Aventura épica de piratas.
+          </p>
+        </div>
       </div>
 
-      <div class="group relative overflow-hidden rounded-2xl">
+      <!-- CARD -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg">
         <img src="https://i.pinimg.com/736x/91/6b/ef/916befeb736f5ec121f40299bcdcb24f.jpg"
-          class="w-full h-80 object-cover group-hover:scale-110 transition">
+          class="w-full h-80 object-cover transition duration-500 group-hover:scale-110 group-hover:blur-[1px]">
 
-        <div class="absolute inset-0 bg-linear-to-t from-black to-transparent"></div>
-        <h3 class="absolute bottom-4 left-4 text-xl font-bold">One Punch Man</h3>
+        <div class="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent"></div>
+
+        <div class="absolute bottom-4 left-4 right-4">
+          <h3 class="text-xl font-bold">One Punch Man</h3>
+          <p class="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition">
+            Acción y comedia con héroes.
+          </p>
+        </div>
       </div>
 
-      <div class="group relative overflow-hidden rounded-2xl">
+      <!-- CARD -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg">
         <img src="https://i.pinimg.com/736x/67/79/b8/6779b85125bcac6634df00768d1362de.jpg"
-          class="w-full h-80 object-cover group-hover:scale-110 transition">
+          class="w-full h-80 object-cover transition duration-500 group-hover:scale-110 group-hover:blur-[1px]">
 
-        <div class="absolute inset-0 bg-linear-to-t from-black to-transparent"></div>
-        <h3 class="absolute bottom-4 left-4 text-xl font-bold">Kuroko no basket</h3>
+        <div class="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent"></div>
+
+        <div class="absolute bottom-4 left-4 right-4">
+          <h3 class="text-xl font-bold">Kuroko no Basket</h3>
+          <p class="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition">
+            Baloncesto con habilidades únicas.
+          </p>
+        </div>
       </div>
 
-      <div class="group relative overflow-hidden rounded-2xl">
+      <!-- CARD -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg">
         <img src="https://i.pinimg.com/736x/97/73/25/977325a85efc3df0e73b79dbc0e65cda.jpg"
-          class="w-full h-80 object-cover group-hover:scale-110 transition">
+          class="w-full h-80 object-cover transition duration-500 group-hover:scale-110 group-hover:blur-[1px]">
 
-        <div class="absolute inset-0 bg-linear-to-t from-black to-transparent"></div>
-        <h3 class="absolute bottom-4 left-4 text-xl font-bold">Naruto</h3>
+        <div class="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent"></div>
+
+        <div class="absolute bottom-4 left-4 right-4">
+          <h3 class="text-xl font-bold">Naruto</h3>
+          <p class="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition">
+            Ninja, acción y superación.
+          </p>
+        </div>
       </div>
 
     </div>
+
   </section>
 
 </div>
 
-
+<!-- BOTÓN SCROLL TOP -->
 <button *ngIf="showScrollTop" (click)="scrollToTop()"
-  class="fixed w-15 h-15 bottom-6 right-6 z-50 bg-orange-500 hover:bg-orange-600 text-white font-bold p-4 rounded-full shadow-xl transition-all duration-300">
+  class="fixed bottom-6 right-6 z-50 w-14 h-14 flex items-center justify-center
+         bg-orange-500 hover:bg-orange-600 rounded-full shadow-2xl
+         transition-all duration-300 hover:scale-110">
 
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-    class="icon icon-tabler icons-tabler-filled icon-tabler-arrow-big-up">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path
-      d="M10.586 3l-6.586 6.586a2 2 0 0 0 -.434 2.18l.068 .145a2 2 0 0 0 1.78 1.089h2.586v7a2 2 0 0 0 2 2h4l.15 -.005a2 2 0 0 0 1.85 -1.995l-.001 -7h2.587a2 2 0 0 0 1.414 -3.414l-6.586 -6.586a2 2 0 0 0 -2.828 0z" />
-  </svg>
+  ↑
 </button>
