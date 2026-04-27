@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
-import { NavComponents } from "../../components/nav-components/nav-components";
+import { NavComponents } from '../../components/nav-components/nav-components';
 
 @Component({
   selector: 'app-comic-on',
@@ -19,7 +19,12 @@ export class ComicOn {
   scrollToTop() {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
+  }
+
+  scrollToMapa() {
+    const section = document.getElementById('mapa');
+    section?.scrollIntoView({ behavior: 'smooth' });
   }
 }

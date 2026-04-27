@@ -5,13 +5,13 @@
     <img src="https://i.pinimg.com/1200x/db/79/b2/db79b23aecdd44e1e2e6ea64237a4e63.jpg"
       class="w-full h-full object-cover">
 
-    <!-- DEGRADADO PRO -->
-    <div class="absolute z-1 inset-0 bg-linear-to-t from-black via-black/70 to-transparent"></div>
+    <!-- DEGRADADO -->
+    <div class="absolute inset-0 bg-linear-to-t from-black via-black/70 to-transparent"></div>
 
     <!-- NAV -->
-    <app-nav-components class="absolute top-0 w-full z-9999"></app-nav-components>
+    <app-nav-components class="absolute top-0 w-full z-50"></app-nav-components>
 
-    <!-- TEXTO HERO -->
+    <!-- TEXTO -->
     <div class="absolute bottom-20 left-10 z-10 max-w-2xl">
       <h1 class="text-5xl md:text-7xl font-extrabold mb-4">
         Comic-Con
@@ -22,21 +22,26 @@
     </div>
   </section>
 
-  <!-- SECCIÓN VIDEO -->
+  <!-- VIDEO -->
   <section class="max-w-6xl mx-auto py-20 px-6 grid md:grid-cols-2 gap-12 items-center">
 
-    <!-- VIDEO CON ESTILO -->
+    <!-- VIDEO -->
     <div class="relative group rounded-2xl overflow-hidden shadow-2xl">
+
       <iframe
-        class="w-full h-75 md:h-87.5"
-        src="https://www.youtube-nocookie.com/embed/WTYOXTgn6XU"
+        class="w-full h-[250px] md:h-[400px]"
+        src="https://www.youtube-nocookie.com/embed/WTYOXTgn6XU?rel=0&modestbranding=1"
+        title="YouTube video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>
 
-      <!-- OVERLAY HOVER -->
-      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+      <!-- OVERLAY -->
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center pointer-events-none">
         <span class="text-white text-xl font-semibold">▶ Ver video</span>
       </div>
+
     </div>
 
     <!-- TEXTO -->
@@ -52,17 +57,17 @@
       </p>
 
       <!-- BOTÓN -->
-      <button class="mt-6 bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-xl font-semibold transition">
+      <button (click)="scrollToMapa()"
+        class="mt-6 bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-xl font-semibold transition">
         Explorar más
       </button>
     </div>
 
   </section>
 
-  <!-- SECCIÓN MAPA -->
-  <section class="px-6 pb-20">
+  <!-- MAPA -->
+  <section id="mapa" class="px-6 pb-20">
 
-    <!-- TITULO -->
     <div class="text-center mb-10">
       <h2 class="text-3xl md:text-4xl font-bold">
         Ubicación del evento
@@ -72,10 +77,9 @@
       </p>
     </div>
 
-    <!-- MAPA ESTILIZADO -->
     <div class="max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white/10">
       <iframe
-        class="w-full h-100"
+        class="w-full h-[300px] md:h-[450px]"
         src="https://www.google.com/maps?q=Lima+Peru&output=embed">
       </iframe>
     </div>
@@ -84,14 +88,11 @@
 
 </div>
 
-
+<!-- BOTÓN SCROLL TOP -->
 <button *ngIf="showScrollTop" (click)="scrollToTop()"
-  class="fixed w-15 h-15 bottom-6 right-6 z-50 bg-orange-500 hover:bg-orange-600 text-white font-bold p-4 rounded-full shadow-xl transition-all duration-300">
+  class="fixed bottom-6 right-6 z-50 w-14 h-14 flex items-center justify-center
+         bg-orange-500 hover:bg-orange-600 rounded-full shadow-2xl
+         transition-all duration-300 hover:scale-110">
 
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-    class="icon icon-tabler icons-tabler-filled icon-tabler-arrow-big-up">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path
-      d="M10.586 3l-6.586 6.586a2 2 0 0 0 -.434 2.18l.068 .145a2 2 0 0 0 1.78 1.089h2.586v7a2 2 0 0 0 2 2h4l.15 -.005a2 2 0 0 0 1.85 -1.995l-.001 -7h2.587a2 2 0 0 0 1.414 -3.414l-6.586 -6.586a2 2 0 0 0 -2.828 0z" />
-  </svg>
+  ↑
 </button>
