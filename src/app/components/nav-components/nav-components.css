@@ -1,0 +1,9 @@
+/* máscara (fondo oscuro) */
+.p-drawer-mask {
+  z-index: 20000 !important;
+}
+
+/* contenido del drawer */
+.p-drawer {
+  z-index: 20001 !important;
+}

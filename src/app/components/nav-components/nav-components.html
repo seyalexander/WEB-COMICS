@@ -15,29 +15,71 @@
   </div>
 
   <!-- BOTÓN MOBILE -->
-  <button (click)="toggleMenu()" class="md:hidden text-2xl">
+  <button (click)="visible4 = true" class="md:hidden text-2xl">
     ☰
   </button>
 
 </nav>
 
-<!-- MENU MOBILE -->
-<div *ngIf="menuOpen"
-     class="md:hidden bg-black/90 backdrop-blur-lg p-6 flex flex-col gap-6 text-white">
+<p-drawer
+  header="Menu"
+  [(visible)]="visible4"
+  position="bottom"
+  appendTo="body"
+  [baseZIndex]="20000"
+  [modal]="true"
+  [style]="{ height: 'auto' }">
 
-  <a routerLink="/principal" (click)="toggleMenu()" class="flex items-center gap-3">
-    <img src="https://i.pinimg.com/736x/a9/a3/66/a9a3667ab3e5b60f00377c035f629eb0.jpg" class="w-10 h-10 rounded-lg">
-    Inicio
-  </a>
+  <div class="flex flex-col gap-4 mt-4">
 
-  <a routerLink="/comic-on" (click)="toggleMenu()" class="flex items-center gap-3">
-    <img src="https://i.pinimg.com/736x/dc/f9/cf/dcf9cf4361b5c81b1f4749ee9873b7a9.jpg" class="w-10 h-10 rounded-lg">
-    Comic-On
-  </a>
+    <!-- ITEM -->
+    <a routerLink="/principal"
+       (click)="toggleMenu()"
+       class="flex items-center gap-4 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition group">
 
-  <a routerLink="/funko-pop" (click)="toggleMenu()" class="flex items-center gap-3">
-    <img src="https://i.pinimg.com/736x/57/30/2c/57302c0749f86843295d8c1d5759a814.jpg" class="w-10 h-10 rounded-lg">
-    Funko Pop
-  </a>
+      <img src="https://i.pinimg.com/736x/a9/a3/66/a9a3667ab3e5b60f00377c035f629eb0.jpg"
+           class="w-12 h-12 rounded-xl object-cover">
 
-</div>
+      <div class="flex flex-col">
+        <span class="font-semibold text-lg">Inicio</span>
+        <span class="text-sm text-gray-400">Página principal</span>
+      </div>
+
+      <span class="ml-auto opacity-0 group-hover:opacity-100 transition">→</span>
+    </a>
+
+    <!-- ITEM -->
+    <a routerLink="/comic-on"
+       (click)="toggleMenu()"
+       class="flex items-center gap-4 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition group">
+
+      <img src="https://i.pinimg.com/736x/dc/f9/cf/dcf9cf4361b5c81b1f4749ee9873b7a9.jpg"
+           class="w-12 h-12 rounded-xl object-cover">
+
+      <div class="flex flex-col">
+        <span class="font-semibold text-lg">Comic-On</span>
+        <span class="text-sm text-gray-400">Eventos y cultura geek</span>
+      </div>
+
+      <span class="ml-auto opacity-0 group-hover:opacity-100 transition">→</span>
+    </a>
+
+    <!-- ITEM -->
+    <a routerLink="/funko-pop"
+       (click)="toggleMenu()"
+       class="flex items-center gap-4 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition group">
+
+      <img src="https://i.pinimg.com/736x/57/30/2c/57302c0749f86843295d8c1d5759a814.jpg"
+           class="w-12 h-12 rounded-xl object-cover">
+
+      <div class="flex flex-col">
+        <span class="font-semibold text-lg">Funko Pop</span>
+        <span class="text-sm text-gray-400">Coleccionables</span>
+      </div>
+
+      <span class="ml-auto opacity-0 group-hover:opacity-100 transition">→</span>
+    </a>
+
+  </div>
+
+</p-drawer>
