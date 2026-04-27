@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { NavComponents } from "../../components/nav-components/nav-components";
+import { NavComponents } from '../../components/nav-components/nav-components';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -19,7 +19,12 @@ export class PaginaPrincipal {
   scrollToTop() {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
+  }
+
+  scrollToAnimes() {
+    const section = document.getElementById('animes');
+    section?.scrollIntoView({ behavior: 'smooth' });
   }
 }
