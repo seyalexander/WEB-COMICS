@@ -1,10 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NavComponents } from "../../components/nav-components/nav-components";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-pagina-principal',
-  imports: [NavComponents],
+  imports: [NavComponents, CommonModule],
   templateUrl: './pagina-principal.html',
   styleUrl: './pagina-principal.css',
 })
-export class PaginaPrincipal {}
+export class PaginaPrincipal {
+  showScrollTop = false;
+
+  @HostListener('window:scroll', [])
+  onScroll() {
+    this.showScrollTop = window.scrollY > 300;
+  }
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+}

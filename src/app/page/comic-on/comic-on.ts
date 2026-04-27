@@ -1,10 +1,25 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
 import { NavComponents } from "../../components/nav-components/nav-components";
 
 @Component({
   selector: 'app-comic-on',
-  imports: [NavComponents],
+  imports: [NavComponents, CommonModule],
   templateUrl: './comic-on.html',
   styleUrl: './comic-on.css',
 })
-export class ComicOn {}
+export class ComicOn {
+  showScrollTop = false;
+
+  @HostListener('window:scroll', [])
+  onScroll() {
+    this.showScrollTop = window.scrollY > 300;
+  }
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+}
