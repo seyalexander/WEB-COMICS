@@ -27,4 +27,9 @@ export class PaginaPrincipal {
     const section = document.getElementById('animes');
     section?.scrollIntoView({ behavior: 'smooth' });
   }
+
+  crollToDescripcion() {
+    const section = document.getElementById('descripcionAnime');
+    section?.scrollIntoView({ behavior: 'smooth' });
+  }
 }
