@@ -1,0 +1,43 @@
+<nav class="absolute top-0 w-full z-20 px-6 py-4 flex items-center justify-between text-white">
+
+  <!-- LOGO -->
+  <div class="flex items-center gap-3">
+    <img src="https://i.pinimg.com/736x/ef/f9/30/eff930e164d392cc2cef65c342813932.jpg"
+      class="w-12 h-12 rounded-xl border-2 border-blue-400 object-cover">
+    <span class="font-bold text-lg hidden md:block">AnimeWorld</span>
+  </div>
+
+  <!-- MENU DESKTOP -->
+  <div class="hidden md:flex items-center gap-8 font-semibold">
+    <a routerLink="/principal" class="hover:text-blue-400 transition">Inicio</a>
+    <a routerLink="/comic-on" class="hover:text-blue-400 transition">Comic-On</a>
+    <a routerLink="/funko-pop" class="hover:text-blue-400 transition">Funko Pop</a>
+  </div>
+
+  <!-- BOTÓN MOBILE -->
+  <button (click)="toggleMenu()" class="md:hidden text-2xl">
+    ☰
+  </button>
+
+</nav>
+
+<!-- MENU MOBILE -->
+<div *ngIf="menuOpen"
+     class="md:hidden bg-black/90 backdrop-blur-lg p-6 flex flex-col gap-6 text-white">
+
+  <a routerLink="/principal" (click)="toggleMenu()" class="flex items-center gap-3">
+    <img src="https://i.pinimg.com/736x/a9/a3/66/a9a3667ab3e5b60f00377c035f629eb0.jpg" class="w-10 h-10 rounded-lg">
+    Inicio
+  </a>
+
+  <a routerLink="/comic-on" (click)="toggleMenu()" class="flex items-center gap-3">
+    <img src="https://i.pinimg.com/736x/dc/f9/cf/dcf9cf4361b5c81b1f4749ee9873b7a9.jpg" class="w-10 h-10 rounded-lg">
+    Comic-On
+  </a>
+
+  <a routerLink="/funko-pop" (click)="toggleMenu()" class="flex items-center gap-3">
+    <img src="https://i.pinimg.com/736x/57/30/2c/57302c0749f86843295d8c1d5759a814.jpg" class="w-10 h-10 rounded-lg">
+    Funko Pop
+  </a>
+
+</div>
